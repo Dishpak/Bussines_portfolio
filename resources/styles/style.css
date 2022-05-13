@@ -1,0 +1,351 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+
+
+/* COMMON */
+html {
+    color: #999;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+body {
+    max-width: 1920px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+section h2 {
+    padding: 70px 0;
+    font-size: 2rem;
+    font-family: 'Aleo', serif;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+section {
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 69px;
+    border-bottom: 1px solid #999;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+}
+
+
+header [display~="flex"] {
+    height: 100%;
+    align-items: center;
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo, .logo img {
+    height: 100%;
+    opacity: 0.7;
+}
+
+/* NAVIGATION */
+
+nav {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    text-align: center;
+    padding: 0.5em;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav ul li {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin-right: 0.75em;
+    min-width: 30px;
+}
+
+nav li:hover {
+    background-color: rgba(153, 153, 153, 0.9);
+}
+
+nav li:hover a {
+    color: #fff;
+}
+
+/* BANNER SECTION */
+
+.banner {
+    width: 100%;
+    height: 730px;
+    margin-top: 70px;
+    background-image: url("../images/banner_background.jpeg");
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: rgba(153, 153, 153, 0.9);
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 5px 5px rgb(77 77 77 / 90%), -5px -5px rgb(51 36 36 / 50%)
+}
+
+.wrapper p {
+    font-size: 1.3rem;
+}
+
+/* MAIN SECTION */
+
+section:nth-child(even){
+    background-color: #332424;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 2.5rem;
+    padding-bottom: 70px;
+}
+
+.container > * {
+    flex: 30%;
+    position: relative;
+    min-width: 200px;
+}
+
+.container figure img {
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.container figcaption {
+    margin-top: 15px;
+}
+
+#advantage figure {
+    min-width: auto;
+}
+
+#portfolio figcaption {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.6rem 0;
+    font-size: 1.2rem;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(153, 153, 153, 0.9);
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+
+#portfolio figure img {
+    height: 200px;
+    width: 100%;
+    display: block;
+}
+
+#portfolio figure:hover figcaption {
+    opacity: 1;
+    display: block;
+    transition: 0.7s;
+}
+
+#portfolio figure:hover img {
+    opacity: 1;
+    transition: 0.7;
+}
+
+#team img {
+    opacity: 1;
+    height: 300px;
+}
+
+
+#team figure:nth-child(2) img {
+    height: auto;
+    min-width: 100%;
+}
+
+table, table td {
+    border: 1px solid #999;
+    vertical-align: middle;
+    color: #fff;
+    padding: 10px;
+}
+
+#pricing table {
+    margin: 0 auto;
+    box-shadow: 0px 5px 10px rgb(153 153 153 / 80%), 
+                5px 0px 10px rgb(153 153 153 / 80%), 
+                0px -5px 10px rgb(153 153 153 / 80%), 
+                -5px 0px 10px rgb(153 153 153 / 80%)
+}
+
+.low-price thead, .low-price tr:nth-child(1n) td:nth-child(2), .low-price td[rowspan] {
+    background-color: rgba(122, 168, 60, 0.5);
+}
+
+.mid-price thead, .mid-price tr:nth-child(3n+2) td:nth-child(1), .mid-price td[rowspan] {
+    background-color: rgba(122, 168, 60, 0.7);
+}
+
+.hight-price thead, .hight-price tr:nth-child(3n) td:nth-child(1), .hight-price td[rowspan] {
+    background-color: rgba(122, 168, 60, 1);    
+}
+
+#contactus, #advantage {
+    min-height: auto;
+}
+
+#contactus .container > div {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 30px;
+    max-height: 300px;
+}
+
+#contactus .container div:nth-child(1) {
+    width: 20%;
+}
+#contactus .container div:nth-child(2) {
+    width: 70%;
+}
+
+#contactus .ico {
+    width: 50px;
+}
+
+#contactus img {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+/* FOOTER SECTION  */
+
+footer {
+    display: flex;
+    justify-items: center;
+    background-color: #332424;
+    height: 69px;
+    border-top: 1px solid #999;
+}
+
+footer p {
+    line-height: 69px;
+    margin-left: 20px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 750px) {
+    
+    .logo {
+        display: none;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+
+    header {
+        position: relative;
+        height: auto;
+    }
+
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .banner {
+        margin-top: 0;
+    }
+
+    #team figure:nth-child(2) {
+        order: -1;
+    }
+    
+}
